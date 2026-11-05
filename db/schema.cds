@@ -18,7 +18,6 @@ entity Employees: cuid, managed {
 
 entity Departments : CodeList {
     key code    : String(10);
-    head        : Association to Employees;
 }
 
 entity Positions : CodeList {
@@ -32,30 +31,4 @@ entity Seniorities : CodeList {
 }
 
 
-/*
-    {
-        directory = 'D';
-        financial = 'F';
-        marketing = 'M';
-        sales = 'S';
-        technologies = 'T';
-        legal = 'L';
-        humanResources ='HR';
-    }
-
-    {
-        ceo = 'CEO';
-        cfo = 'CFO';
-        cto = 'CTO';
-        coo = 'COO';
-        director = 'Dir';
-        manager = 'Mgr';
-        supervisor = 'Sup';
-        specialist = 'Spec';
-        analist = 'An';
-    }
-
-    {
-
-    }
-*/
+//Nota: Los CSV van en db/data/ y el nombre del archivo tiene que seguir el patrón <namespace>-<Entidad>.csv.
