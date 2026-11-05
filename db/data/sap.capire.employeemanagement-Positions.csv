@@ -1,0 +1,10 @@
+code,name,descr,rank
+CEO,Chief Executive Officer,,1
+CFO,Chief Financial Officer,,2
+CTO,Chief Technology Officer,,2
+COO,Chief Operating Officer,,2
+Dir,Director,,3
+Mgr,Manager,,4
+Sup,Supervisor,,5
+Spec,Specialist,,6
+An,Analyst,,7
