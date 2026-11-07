@@ -1,0 +1,33 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Employees
+# @name Employees_GET
+GET {{server}}/odata/v4/processor/Employees
+Authorization: Basic {{username}}:{{password}}
+
+
+### Departments
+# @name Departments_GET
+GET {{server}}/odata/v4/processor/Departments
+Authorization: Basic {{username}}:{{password}}
+
+
+### Positions
+# @name Positions_GET
+GET {{server}}/odata/v4/processor/Positions
+Authorization: Basic {{username}}:{{password}}
+
+
+### Seniorities
+# @name Seniorities_GET
+GET {{server}}/odata/v4/processor/Seniorities
+Authorization: Basic {{username}}:{{password}}
+
+
+### getByDepartment
+# @name getByDepartment_GET
+GET {{server}}/odata/v4/processor/getByDepartment(department='M')
+Authorization: Basic {{username}}:{{password}}

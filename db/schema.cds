@@ -12,8 +12,8 @@ entity Employees: cuid, managed {
     department  : Association to Departments;
     position    : Association to Positions;
     seniority   : Association to Seniorities;
-    manager     : Association to Employees; //resolver con handler que un empleado no se su propio jefe
-    fullName = firstName || ' ' || lastName;
+    manager     : Association to Employees; //resolver con handler que un empleado no sea su propio jefe
+    fullName    : String(123) = firstName || ' ' || lastName;
 }
 
 entity Departments : CodeList {
