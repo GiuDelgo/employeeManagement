@@ -2,7 +2,7 @@ import cds from '@sap/cds';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default class AdminService extends cds.ApplicationService {
+export default class HRAdminService extends cds.ApplicationService {
     init() {        
         const { Employees } = this.entities;
 

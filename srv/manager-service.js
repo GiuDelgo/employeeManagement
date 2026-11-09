@@ -1,6 +1,6 @@
 import cds from '@sap/cds';
 
-export default class ProcessorService extends cds.ApplicationService {
+export default class managerService extends cds.ApplicationService {
     init (){
 
         this.on('getByDepartment', getByDept);

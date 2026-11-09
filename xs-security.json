@@ -1,15 +1,36 @@
 {
   "scopes": [
     {
-      "name": "$XSAPPNAME.admin",
+      "name": "$XSAPPNAME.HRadmin",
       "description": "admin"
     },
     {
-      "name": "$XSAPPNAME.processor",
-      "description": "processor"
+      "name": "$XSAPPNAME.manager",
+      "description": "manager"
+    },
+    {
+      "name": "$XSAPPNAME.HRadmin",
+      "description": "HRadmin"
     }
   ],
   "attributes": [],
-  "role-templates": [],
+  "role-templates": [
+    {
+      "name": "HRadmin",
+      "description": "HR employee administrator",
+      "scope-references": [
+        "$XSAPPNAME.HRadmin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "manager",
+      "description": "Employee manager",
+      "scope-references": [
+        "$XSAPPNAME.manager"
+      ],
+      "attribute-references": []
+    }
+  ],
   "authorities-inheritance": false
 }

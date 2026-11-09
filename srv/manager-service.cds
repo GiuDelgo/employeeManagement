@@ -1,7 +1,8 @@
 using {sap.capire.employeemanagement as my } from '../db/schema';
 
-@requires: 'processor'
-service processorService {
+@requires: ['HRadmin', 'manager']
+service managerService {
+
     @readonly entity Employees as projection on my.Employees excluding 
     { createdAt, createdBy, firstName, lastName };
 

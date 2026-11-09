@@ -1,7 +1,8 @@
 using {sap.capire.employeemanagement as my} from '../db/schema';
 
-@requires: 'admin'
-service AdminService {
+@requires: ['HRadmin']
+service HRAdminService {
+
     entity Employees as projection on my.Employees actions {
         action deactivate() returns Employees;
     };
@@ -11,5 +12,5 @@ service AdminService {
 }
 
 
-annotate AdminService.Employees with @odata.draft.enabled;
+annotate HRAdminService.Employees with @odata.draft.enabled;
 

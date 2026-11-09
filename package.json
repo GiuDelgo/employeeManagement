@@ -18,11 +18,27 @@
   "cds": {
     "requires": {
       "[production]": {
-        "auth": "xsuaa"
-      }, 
-      "auth": {
-        "users": {
-          "alice": { "roles": ["admin", "processor"] }
+        "auth": "xsuaa",
+        "db": "hana"
+      },
+      "[developement]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "alice": {
+              "roles": [
+                "HRadmin"
+              ]
+            },
+            "bob": {
+              "roles": [
+                "manager"
+              ]
+            },
+            "carol": {
+              "roles": []
+            }
+          }
         }
       }
     }

@@ -34,6 +34,26 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: EmployeeManagement-db
+  - name: EmployeeManagement
+    type: approuter.nodejs
+    path: .deploy/app-router
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv-api # must be used in xs-app.json as well
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: EmployeeManagement-auth
+    provides:
+      - name: app-api
+        properties:
+          app-protocol: ${protocol}
+          app-uri: ${default-uri}
 
 resources:
   - name: EmployeeManagement-auth
@@ -49,6 +69,10 @@ resources:
           credential-types:
             - "binding-secret"
             - "x509"
+          redirect-uris:
+            - https://*~{app-api/app-uri}/**
+    requires:
+      - name: app-api
   - name: EmployeeManagement-db
     type: com.sap.xs.hdi-container
     parameters:
