@@ -5,39 +5,39 @@
 
 ### Employees
 # @name Employees_GET
-GET {{server}}/odata/v4/admin/Employees
+GET {{server}}/odata/v4/hradmin/Employees
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Employees Drafts GET
 # @name Employees_Drafts_GET
-GET {{server}}/odata/v4/admin/Employees?$filter=(IsActiveEntity eq false)
+GET {{server}}/odata/v4/hradmin/Employees?$filter=(IsActiveEntity eq false)
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Employees Draft POST
 # @name Employees_Draft_POST
-POST {{server}}/odata/v4/admin/Employees
+POST {{server}}/odata/v4/hradmin/Employees
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "firstName": "firstName-10869267",
-  "lastName": "lastName-10869267",
-  "email": "email-10869267",
-  "hireDate": "2000-12-19",
-  "active": false,
+  "firstName": "firstName-6436312",
+  "lastName": "lastName-6436312",
+  "email": "email-6436312",
+  "hireDate": "2006-04-26",
+  "active": true,
   "department": {
-    "code": "s-16760836"
+    "code": "ts-4148838"
   },
   "position": {
-    "code": "s-24246474"
+    "code": "s-27029820"
   },
   "seniority": {
-    "code": "96581"
+    "code": "90930"
   },
   "manager": {
-    "ID": "10869267-c7d8-4346-9e98-81fa5c44d4c0"
+    "ID": "64363129-147a-4b19-9ef1-0dbe1e9ded52"
   }
 }
 
@@ -48,34 +48,34 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Employees Draft PATCH
 # @name Employees_Draft_Patch
-PATCH {{server}}/odata/v4/admin/Employees(ID={{draftID}},IsActiveEntity=false)
+PATCH {{server}}/odata/v4/hradmin/Employees(ID={{draftID}},IsActiveEntity=false)
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "firstName": "firstName-10869267",
-  "lastName": "lastName-10869267",
-  "email": "email-10869267",
-  "hireDate": "2000-12-19",
-  "active": false,
+  "firstName": "firstName-6436312",
+  "lastName": "lastName-6436312",
+  "email": "email-6436312",
+  "hireDate": "2006-04-26",
+  "active": true,
   "department": {
-    "code": "s-16760836"
+    "code": "ts-4148838"
   },
   "position": {
-    "code": "s-24246474"
+    "code": "s-27029820"
   },
   "seniority": {
-    "code": "96581"
+    "code": "90930"
   },
   "manager": {
-    "ID": "10869267-c7d8-4346-9e98-81fa5c44d4c0"
+    "ID": "64363129-147a-4b19-9ef1-0dbe1e9ded52"
   }
 }
 
 
 ### Employees Draft Prepare
 # @name Employees_Draft_Prepare
-POST {{server}}/odata/v4/admin/Employees(ID={{draftID}},IsActiveEntity=false)/AdminService.draftPrepare
+POST {{server}}/odata/v4/hradmin/Employees(ID={{draftID}},IsActiveEntity=false)/HRAdminService.draftPrepare
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -84,7 +84,7 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Employees Draft Activate
 # @name Employees_Draft_Activate
-POST {{server}}/odata/v4/admin/Employees(ID={{draftID}},IsActiveEntity=false)/AdminService.draftActivate
+POST {{server}}/odata/v4/hradmin/Employees(ID={{draftID}},IsActiveEntity=false)/HRAdminService.draftActivate
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -93,7 +93,7 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Employees deactivate
 # @name Employees_deactivate_POST
-POST {{server}}/odata/v4/admin/Employees(ID=00000000-0000-4000-8000-000000000001,IsActiveEntity=true)/AdminService.deactivate
+POST {{server}}/odata/v4/hradmin/Employees(ID=00000000-0000-4000-8000-000000000001,IsActiveEntity=true)/HRAdminService.deactivate
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -102,17 +102,17 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Departments
 # @name Departments_GET
-GET {{server}}/odata/v4/admin/Departments
+GET {{server}}/odata/v4/hradmin/Departments
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Positions
 # @name Positions_GET
-GET {{server}}/odata/v4/admin/Positions
+GET {{server}}/odata/v4/hradmin/Positions
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Seniorities
 # @name Seniorities_GET
-GET {{server}}/odata/v4/admin/Seniorities
+GET {{server}}/odata/v4/hradmin/Seniorities
 Authorization: Basic {{username}}:{{password}}

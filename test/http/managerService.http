@@ -5,29 +5,29 @@
 
 ### Employees
 # @name Employees_GET
-GET {{server}}/odata/v4/processor/Employees
+GET {{server}}/odata/v4/manager/Employees
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Departments
 # @name Departments_GET
-GET {{server}}/odata/v4/processor/Departments
+GET {{server}}/odata/v4/manager/Departments
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Positions
 # @name Positions_GET
-GET {{server}}/odata/v4/processor/Positions
+GET {{server}}/odata/v4/manager/Positions
 Authorization: Basic {{username}}:{{password}}
 
 
 ### Seniorities
 # @name Seniorities_GET
-GET {{server}}/odata/v4/processor/Seniorities
+GET {{server}}/odata/v4/manager/Seniorities
 Authorization: Basic {{username}}:{{password}}
 
 
 ### getByDepartment
 # @name getByDepartment_GET
-GET {{server}}/odata/v4/processor/getByDepartment(department='M')
+GET {{server}}/odata/v4/manager/getByDepartment(department='M')
 Authorization: Basic {{username}}:{{password}}
