@@ -1,0 +1,66 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Absences
+# @name Absences_GET
+GET {{server}}/odata/v4/processor/Absences
+Authorization: Basic {{username}}:{{password}}
+
+
+### Absences
+# @name Absences_POST
+POST {{server}}/odata/v4/processor/Absences
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "19710796-a760-4aaa-8070-a7be96920eef",
+  "startDate": "2008-07-20",
+  "endDate": "2001-10-22",
+  "reason": {
+    "code": "on-7528203"
+  },
+  "status": {
+    "code": "te-1839252"
+  }
+}
+
+
+### Absences
+# @name Absences_PATCH
+PATCH {{server}}/odata/v4/processor/Absences/19710796-a760-4aaa-8070-a7be96920eef
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "19710796-a760-4aaa-8070-a7be96920eef",
+  "startDate": "2008-07-20",
+  "endDate": "2001-10-22",
+  "reason": {
+    "code": "on-7528203"
+  },
+  "status": {
+    "code": "te-1839252"
+  }
+}
+
+
+### Absences
+# @name Absences_DELETE
+DELETE {{server}}/odata/v4/processor/Absences/19710796-a760-4aaa-8070-a7be96920eef
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Reason
+# @name Reason_GET
+GET {{server}}/odata/v4/processor/Reason
+Authorization: Basic {{username}}:{{password}}
+
+
+### status
+# @name status_GET
+GET {{server}}/odata/v4/processor/status
+Authorization: Basic {{username}}:{{password}}

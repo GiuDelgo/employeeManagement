@@ -13,7 +13,7 @@ entity Employees: cuid, managed {
     position    : Association to Positions;
     seniority   : Association to Seniorities;
     manager     : Association to Employees; //resolver con handler que un empleado no sea su propio jefe
-    fullName    : String(123) = firstName || ' ' || lastName;
+    fullName    : String(123) = firstName || ' ' || lastName;  
 }
 
 entity Departments : CodeList {
@@ -29,5 +29,21 @@ entity Seniorities : CodeList {
     key code: String(5);
 }
 
+entity Absences : cuid, managed {
+    startDate   : Date;
+    endDate     : Date;
+    reason      : Association to Reason not null; //poner valor por default
+    status      : Association to Status not null; //poner valor por default
+    employee    : Association to Employees not null;
+}
+
+entity Reason : CodeList {
+    key code: String(10);
+}
+
+
+entity Status : CodeList {
+    key code: String(10);
+}
 
 //Nota: Los CSV van en db/data/ y el nombre del archivo tiene que seguir el patrón <namespace>-<Entidad>.csv.
